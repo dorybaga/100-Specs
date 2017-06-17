@@ -408,9 +408,6 @@ function drink(beerName){
 
 }
 
-
-
-
 /* Step 24
  *
  * Define a function named "browseURL" that takes
@@ -422,6 +419,24 @@ function drink(beerName){
  * @return {String if true else return false}
  *
  */
+
+// var browsers = {
+//   Chromium: "google.com",
+//   Safari: "apple.com",
+//   Opera: "opera.com",
+//   Firefox: "mozilla.org",
+//   Sleipnir: "fenrir-inc.com",
+//   Konqueror: "konqueror.org"
+// };
+
+
+function browseURL(browserName){
+  if (browsers.hasOwnProperty(browserName)){
+    return browsers[browserName];
+  } else {
+    return false;
+  }
+}
 
 
 /* Step 25
