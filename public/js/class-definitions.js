@@ -17,6 +17,7 @@ var unicorn = null;
 
 var videogame_system = "Atari";
 
+
 /* Step 3
  *
  * Declare a variable named "sahara_animal"
@@ -24,6 +25,7 @@ var videogame_system = "Atari";
  *
  */
 
+var sahara_animal = "The Addax";
 
 /* Step 4
  *
@@ -33,6 +35,7 @@ var videogame_system = "Atari";
  * Capitalize the names.
  */
 
+var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
 
 /* Step 5
  *
