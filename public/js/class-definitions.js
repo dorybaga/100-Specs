@@ -337,6 +337,12 @@ return "Nile River";
  *
  */
 
+function addNumbers(x, y){
+  result = x + y;
+  return result;
+}
+
+
 
 /* Step 22
  *
