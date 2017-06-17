@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 /* Step 1
  *
  * Declare a variable named "unicorn"
@@ -365,10 +366,6 @@ function installLinux(linuxType){
   }
 }
 
-
-
-
-
 /* Step 23
  *
  * Define a function named "drink" that takes
@@ -386,6 +383,32 @@ function installLinux(linuxType){
  * @return {Bool when False, String when True}
  *
  */
+
+// var beers = {
+//   IPA: "Ale",
+//   Lager: "Strong",
+//   Heffeweisen: "German",
+//   Stout: ["Thick", "Dark"],
+//   Porter: "Bitter",
+//   Ale: ["Light", "Golden"]
+// };
+
+function drink(beerName){
+  // console.log(beers);
+  if(beers.hasOwnProperty(beerName)){
+    if (typeof beers[beerName] === "string"){
+      console.log("This " + beerName + " is " + beers[beerName] + ".");
+      return "This " + beerName + " is " + beers[beerName] + ".";
+    } else if (Array.isArray(beers[beerName]) === true)
+      console.log("This " + beerName + " is " + beers[beerName][0] + " and " + beers[beerName][1] + ".");
+      return "This " + beerName + " is " + beers[beerName][0] + " and " + beers[beerName][1] + ".";
+    } else {
+      return false;
+    }
+
+}
+
+
 
 
 /* Step 24
