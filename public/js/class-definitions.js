@@ -343,7 +343,6 @@ function addNumbers(x, y){
 }
 
 
-
 /* Step 22
  *
  * Define a function named "installLinux"
@@ -355,6 +354,19 @@ function addNumbers(x, y){
  * @return {Bool}
  *
  */
+
+function installLinux(linuxType){
+  for (var i = 0; i < linuxFlavors.length; i++){
+    if (linuxFlavors.indexOf(linuxType) !== -1){
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+
+
 
 
 /* Step 23
