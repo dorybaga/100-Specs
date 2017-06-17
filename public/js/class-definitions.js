@@ -15,6 +15,7 @@ var unicorn = null;
  *
  */
 
+var videogame_system = "Atari";
 
 /* Step 3
  *
