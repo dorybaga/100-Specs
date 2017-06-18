@@ -539,13 +539,12 @@ class Person {
 
 function purchaseLaptop(laptop){
   if (laptopCosts.hasOwnProperty(laptop)){
-    console.log(laptopCosts[laptop]);
+    // console.log(laptopCosts[laptop]);
     return `${laptopCosts[laptop]}`;
   } else {
     return -1;
   }
 }
-
 
 /* Step 29
  *
@@ -558,6 +557,17 @@ function purchaseLaptop(laptop){
  * @return {Bool}
  *
  */
+
+function canTalkAbout(club){
+  console.log(club);
+  if (club === club_name){
+    return false;
+  } else {
+    return true;
+  }
+}
+
+
 
 
 /* Step 30
