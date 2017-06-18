@@ -507,23 +507,39 @@ function favoritePlanet(currentPlanet){
  *
  */
 
-class Person {
-  constructor(name, money, age, gender){
+
+ function Person(name, money, age, gender){
     this.name = name;
     this.money = money;
     this.age = age;
     this.gender = gender;
-  }
+ }
 
-  spendMoney(money){
-    this.money -= money;
-  }
+ Person.prototype.spendMoney = function(money){
+  this.money -= money;
+ };
 
-  earnMoney(money){
-    this.money += money;
-  }
+ Person.prototype.earnMoney = function(money){
+  this.money += money;
+ };
 
-}
+// class Person {
+//   constructor(name, money, age, gender){
+//     this.name = name;
+//     this.money = money;
+//     this.age = age;
+//     this.gender = gender;
+//   }
+
+//   spendMoney(money){
+//     this.money -= money;
+//   }
+
+//   earnMoney(money){
+//     this.money += money;
+//   }
+
+// }
 
 /* Step 28
  *
@@ -675,7 +691,6 @@ SolarSystem.prototype.removePlanet = function(planet){
 };
 
 
-
 /* Step 33
  *
  * Define an ES5 class named "PrincessLeia" that is a subclass of "Person"
@@ -708,6 +723,40 @@ SolarSystem.prototype.removePlanet = function(planet){
  *   marries
  *
  */
+
+function PrincessLeia(name, money, age, gender){
+  this.name = name;
+  this.money = money;
+  this.age = age;
+  this.gender = gender;
+  this.isInTrouble = null;
+}
+
+PrincessLeia.prototype = Object.create(Person.prototype, {
+  constructor: PrincessLeia
+});
+
+PrincessLeia.prototype.shootsGun = function() {
+  this.isInTrouble = false;
+  return `Leia shoots her gun wildly`;
+};
+
+PrincessLeia.prototype.getsInTrouble = function() {
+  this.isInTrouble = true;
+  return `Help me Obi-wan Kenobi, you're my only hope`;
+};
+
+PrincessLeia.prototype.marries = function(lovah) {
+  if (lovah === "Han Solo"){
+    return true;
+  } else if (lovah === "Luke Skywalker"){
+    return `Gross!`;
+  } else {
+    return false;
+  }
+
+};
+
 
 
 /* Step 34
