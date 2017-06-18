@@ -384,15 +384,6 @@ function installLinux(linuxType){
  *
  */
 
-// var beers = {
-//   IPA: "Ale",
-//   Lager: "Strong",
-//   Heffeweisen: "German",
-//   Stout: ["Thick", "Dark"],
-//   Porter: "Bitter",
-//   Ale: ["Light", "Golden"]
-// };
-
 function drink(beerName){
   // console.log(beers);
   if(beers.hasOwnProperty(beerName)){
@@ -420,16 +411,6 @@ function drink(beerName){
  *
  */
 
-// var browsers = {
-//   Chromium: "google.com",
-//   Safari: "apple.com",
-//   Opera: "opera.com",
-//   Firefox: "mozilla.org",
-//   Sleipnir: "fenrir-inc.com",
-//   Konqueror: "konqueror.org"
-// };
-
-
 function browseURL(browserName){
   if (browsers.hasOwnProperty(browserName)){
     return browsers[browserName];
@@ -448,9 +429,6 @@ function browseURL(browserName){
  * @return {String}
  *
  */
-
-// var livingOrganismClassification = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"];
-
 
 function listLivingOrgClass(){
   var list = '';
@@ -495,6 +473,16 @@ function listLivingOrgClass(){
  * @return {String}
  *
  */
+
+function favoritePlanet(currentPlanet){
+  var randomPlanet = planets[Math.floor(Math.random() * planets.length)];
+  if (planets.indexOf(currentPlanet) === -1){
+    return `${currentPlanet} is not a planet!`;
+  } else {
+    return `I'm from ${currentPlanet}, but I wish I could go to ${randomPlanet}`;
+  }
+}
+
 
 
 /* Step 27
