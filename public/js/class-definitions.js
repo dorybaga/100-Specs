@@ -1482,9 +1482,9 @@ Cookie.prototype.swipedByCookieMonster = function(dayOfTheWeek){
  * and assign the values to each variable below.
  *
  */
-var warmBloodedAnimal;
-var coldBloodedAnimal;
-var notWarmOrColdAnimal;
+var warmBloodedAnimal = new Animal("Monkey", "male").isWarmBlooded();
+var coldBloodedAnimal = new Animal("Fish", "female").isWarmBlooded();
+var notWarmOrColdAnimal = new Animal("Dinosaur", "unknown").isWarmBlooded();
 
 
 /* Step 92
