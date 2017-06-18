@@ -599,10 +599,6 @@ function Pen(color){
 }
 
 
-
-
-
-
 /* Step 31
  *
  * Define an ES5 class named "Garden" with a property for
@@ -629,6 +625,23 @@ function Pen(color){
  *   grow
  *
  */
+
+function Garden(plantsTotal){
+  this.plantsTotal = plantsTotal;
+  this.isWatered = false;
+}
+
+Garden.prototype.water = function(){
+  this.isWatered = true;
+};
+
+Garden.prototype.grow = function(){
+  if (this.isWatered === true){
+    return this.plantsTotal++;
+  } else {
+    return false;
+  }
+};
 
 
 /* Step 32
