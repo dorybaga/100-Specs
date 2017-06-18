@@ -1183,7 +1183,6 @@ function Meal([foods]){
   this.foods = [];
 }
 
-
 /**
  * Create a new instance of the Classes you defined above, below!
  * Steps 60-80 (each variable is a 'step')
@@ -1191,12 +1190,12 @@ function Meal([foods]){
 
 
 // Create 2 different species of animals
-var george;
-var nemo;
+var george = new Animal("Monkey", "male");
+var nemo = new Animal("Fish", "male");
 
 // Create 2 different vehicles
-var civic;
-var forte;
+var civic = new Vehicle("Honda", "Civic");
+var forte = new Vehicle("KIA", "Forte");
 
 // Create 2 shapes with different numbers of sides
 var square;
