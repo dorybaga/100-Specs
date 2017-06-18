@@ -385,13 +385,10 @@ function installLinux(linuxType){
  */
 
 function drink(beerName){
-  // console.log(beers);
   if(beers.hasOwnProperty(beerName)){
     if (typeof beers[beerName] === "string"){
-      // console.log("This " + beerName + " is " + beers[beerName] + ".");
       return "This " + beerName + " is " + beers[beerName] + ".";
     } else if (Array.isArray(beers[beerName]) === true)
-      // console.log("This " + beerName + " is " + beers[beerName][0] + " and " + beers[beerName][1] + ".");
       return "This " + beerName + " is " + beers[beerName][0] + " and " + beers[beerName][1] + ".";
     } else {
       return false;
@@ -434,22 +431,9 @@ function listLivingOrgClass(){
   var list = '';
   for (var i = 0; i < livingOrganismClassification.length; i++){
     var listItem = `<li>${livingOrganismClassification[i]}</li>`;
-    // console.log(listItem);
     list += listItem;
   }
-  // console.log(list);
-  // console.log(`<ul>${list}</ul>`);
   return `<ul>${list}</ul>`;
-
-//   return `<ul>
-//     <li>${livingOrganismClassification[0]}</li>
-//     <li>${livingOrganismClassification[1]}</li>
-//     <li>${livingOrganismClassification[2]}</li>
-//     <li>${livingOrganismClassification[3]}</li>
-//     <li>${livingOrganismClassification[4]}</li>
-//     <li>${livingOrganismClassification[5]}</li>
-//     <li>${livingOrganismClassification[6]}</li>
-// </ul>`;
 }
 
 
@@ -555,7 +539,6 @@ function favoritePlanet(currentPlanet){
 
 function purchaseLaptop(laptop){
   if (laptopCosts.hasOwnProperty(laptop)){
-    // console.log(laptopCosts[laptop]);
     return `${laptopCosts[laptop]}`;
   } else {
     return -1;
@@ -575,7 +558,6 @@ function purchaseLaptop(laptop){
  */
 
 function canTalkAbout(club){
-  // console.log(club);
   if (club === club_name){
     return false;
   } else {
@@ -607,9 +589,7 @@ function canTalkAbout(club){
 
 function Pen(color){
   this.color = color;
-
   Pen.prototype.write = function(message){
-  // console.log(`${color}: ${message}`);
   return `${color}: ${message}`;
   };
 }
@@ -683,7 +663,6 @@ function SolarSystem(){
 
 SolarSystem.prototype.addPlanet = function(planet){
   this.planets.push(planet);
-  // console.log(this.planets);
 };
 
 SolarSystem.prototype.removePlanet = function(planet){
