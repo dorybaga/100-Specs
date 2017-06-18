@@ -1493,8 +1493,8 @@ var notWarmOrColdAnimal = new Animal("Dinosaur", "unknown").isWarmBlooded();
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
-var forwardDriving;
+var streetDriving = new Vehicle("Honda", "Civic").drive("University Ave");
+var forwardDriving = new Vehicle("KIA", "Forte").drive("");
 
 
  /* Step 93
