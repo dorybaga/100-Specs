@@ -683,7 +683,7 @@ function SolarSystem(){
 
 SolarSystem.prototype.addPlanet = function(planet){
   this.planets.push(planet);
-  console.log(this.planets);
+  // console.log(this.planets);
 };
 
 SolarSystem.prototype.removePlanet = function(planet){
@@ -1089,6 +1089,14 @@ function Vehicle(make, model){
  * value of the sides property to null.
  *
  */
+
+function Shape(sides){
+  if (sides >= 3){
+  this.sides = sides;
+  } else if (sides < 3 || Number.isInteger(sides) === false){
+    this.sides = null;
+  }
+}
 
 
 /**
