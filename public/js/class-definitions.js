@@ -1108,8 +1108,8 @@ function Shape(sides){
  */
 
 function Box(contents, isOpen){
-  this.contents = [];
-  this.isOpen = false;
+  this.contents = contents;
+  this.isOpen = isOpen;
 }
 
 
@@ -1121,7 +1121,7 @@ function Box(contents, isOpen){
  */
 
 function Door(isOpen){
-  this.isOpen = false;
+  this.isOpen = isOpen;
 }
 
 
@@ -1157,7 +1157,7 @@ function House(stories){
  */
 
 function Lightbulb(isOn){
-  this.isOn = false;
+  this.isOn = isOn;
 }
 
 
@@ -1202,8 +1202,10 @@ var square = new Shape(4);
 var hexagon = new Shape(6);
 
 // Create 2 boxes
-var catBox;
-var christmasPresent;
+var cat = new Animal("Cat", "female");
+var catBox = new Box(cat, true);
+
+var christmasPresent = new Box("gift", false);
 
 // Create 2 doors
 var automaticDoor;
