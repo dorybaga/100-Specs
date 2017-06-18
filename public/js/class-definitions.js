@@ -559,15 +559,13 @@ function purchaseLaptop(laptop){
  */
 
 function canTalkAbout(club){
-  console.log(club);
+  // console.log(club);
   if (club === club_name){
     return false;
   } else {
     return true;
   }
 }
-
-
 
 
 /* Step 30
@@ -590,6 +588,19 @@ function canTalkAbout(club){
  *   write
  *
  */
+
+function Pen(color){
+  this.color = color;
+
+  Pen.prototype.write = function(message){
+  // console.log(`${color}: ${message}`);
+  return `${color}: ${message}`;
+  };
+}
+
+
+
+
 
 
 /* Step 31
