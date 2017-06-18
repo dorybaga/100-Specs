@@ -1255,6 +1255,20 @@ var dinner = new Meal(["fish", "vegetables"]);
  */
 
 
+Animal.prototype.isWarmBlooded = function(){
+  if (this.species === "Fish"){
+    return false;
+  } else if (this.species === "Monkey"){
+    return true;
+  } else if (this.species === "Bird"){
+    return true;
+  } else {
+    return `Could not determine if warm-blooded`;
+  }
+};
+
+
+
 /* Step 82
  *
  * Declare a Vehicle method called drive that accepts a parameter
