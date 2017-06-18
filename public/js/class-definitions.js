@@ -1345,11 +1345,6 @@ Shape.prototype.getType = function(){
  *
  */
 
-// function Box(contents, isOpen){
-//   this.contents = contents;
-//   this.isOpen = isOpen;
-// }
-
 Box.prototype.openBox = function(){
   if (this.isOpen === false){
     this.isOpen = true;
@@ -1368,6 +1363,16 @@ Box.prototype.openBox = function(){
  * Return true if openClose opens the door, false if openClose closes the door.
  *
  */
+
+Door.prototype.openClose = function(){
+  if(this.isOpen === false){
+    this.isOpen = true;
+    return true;
+  } else if (this.isOpen === true){
+    this.isOpen = false;
+    return false;
+  }
+};
 
 
 /* Step 86
