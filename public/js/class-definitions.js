@@ -397,10 +397,10 @@ function drink(beerName){
   // console.log(beers);
   if(beers.hasOwnProperty(beerName)){
     if (typeof beers[beerName] === "string"){
-      console.log("This " + beerName + " is " + beers[beerName] + ".");
+      // console.log("This " + beerName + " is " + beers[beerName] + ".");
       return "This " + beerName + " is " + beers[beerName] + ".";
     } else if (Array.isArray(beers[beerName]) === true)
-      console.log("This " + beerName + " is " + beers[beerName][0] + " and " + beers[beerName][1] + ".");
+      // console.log("This " + beerName + " is " + beers[beerName][0] + " and " + beers[beerName][1] + ".");
       return "This " + beerName + " is " + beers[beerName][0] + " and " + beers[beerName][1] + ".";
     } else {
       return false;
@@ -448,6 +448,32 @@ function browseURL(browserName){
  * @return {String}
  *
  */
+
+// var livingOrganismClassification = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"];
+
+
+function listLivingOrgClass(){
+  var list = '';
+  for (var i = 0; i < livingOrganismClassification.length; i++){
+    var listItem = `<li>${livingOrganismClassification[i]}</li>`;
+    // console.log(listItem);
+    list += listItem;
+  }
+  // console.log(list);
+  // console.log(`<ul>${list}</ul>`);
+  return `<ul>${list}</ul>`;
+
+//   return `<ul>
+//     <li>${livingOrganismClassification[0]}</li>
+//     <li>${livingOrganismClassification[1]}</li>
+//     <li>${livingOrganismClassification[2]}</li>
+//     <li>${livingOrganismClassification[3]}</li>
+//     <li>${livingOrganismClassification[4]}</li>
+//     <li>${livingOrganismClassification[5]}</li>
+//     <li>${livingOrganismClassification[6]}</li>
+// </ul>`;
+}
+
 
 
 /* Step 26
