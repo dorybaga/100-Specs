@@ -1268,7 +1268,6 @@ Animal.prototype.isWarmBlooded = function(){
 };
 
 
-
 /* Step 82
  *
  * Declare a Vehicle method called drive that accepts a parameter
@@ -1277,6 +1276,14 @@ Animal.prototype.isWarmBlooded = function(){
  *
  */
 
+
+ Vehicle.prototype.drive = function(streetName){
+  if (typeof streetName !== "string" || streetName === null || streetName === ""){
+    return `Driving forward`;
+  } else if (typeof streetName === "string"){
+    return `Driving on ${streetName}`;
+  }
+ };
 
  /* Step 83
  *
