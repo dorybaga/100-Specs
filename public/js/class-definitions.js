@@ -757,8 +757,6 @@ PrincessLeia.prototype.marries = function(lovah) {
 
 };
 
-
-
 /* Step 34
  *
  * Define an ES5 class named "Stapler" with properties "color"
@@ -776,6 +774,19 @@ PrincessLeia.prototype.marries = function(lovah) {
  *   staplePapers
  *
  */
+
+function Stapler(color, maxPapers){
+  this.color = color;
+  this.maxPapers = maxPapers;
+}
+
+Stapler.prototype.staplePapers = function(numPapers){
+  if (numPapers <= this.maxPapers){
+    return true;
+  } else {
+    return false;
+  }
+};
 
 
 /* Step 35
