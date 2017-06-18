@@ -1446,6 +1446,7 @@ Cookie.prototype.swipedByCookieMonster = function(dayOfTheWeek){
  *
  * Declare a Meal method called containsJunkFood that returns true if
  * at least one of the items in the foods array is junk food, false otherwise.
+
  * To check if the food item is junk food, create an array called
  * junkFood containing the following strings: "chips", "soda", "ice cream",
  * "popcorn", and "candy".
@@ -1455,6 +1456,17 @@ Cookie.prototype.swipedByCookieMonster = function(dayOfTheWeek){
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
  *
  */
+
+ Meal.prototype.containsJunkFood = function(){
+  var junkFood = ["chips", "soda", "ice cream", "popcorn", "candy"];
+  for (var i = 0; i < this.foods.length; i++){
+    if (junkFood.indexOf(this.foods[i]) !== -1){
+      return true;
+    } else if (junkFood.indexOf(this.foods[i]) === -1){
+      return false;
+    }
+  }
+};
 
 
  /* Steps 91 to 100
