@@ -1179,8 +1179,8 @@ function Cookie(flavor){
  * @param {Array} foods All the foods in the meal
  */
 
-function Meal([foods]){
-  this.foods = [];
+function Meal(foods){
+  this.foods = foods;
 }
 
 /**
@@ -1228,8 +1228,8 @@ var chocolateChip = new Cookie("chocolate");
 var gingerbread = new Cookie("gingerbread");
 
 // Create 2 different meals
-var breakfast;
-var dinner;
+var breakfast = new Meal(["cereal", "milk"]);
+var dinner = new Meal(["fish", "vegetables"]);
 
 
  /* Steps 81 to 90
