@@ -525,9 +525,6 @@ class Person {
 
 }
 
-
-
-
 /* Step 28
  *
  * Define a function named "purchaseLaptop" that takes
@@ -539,6 +536,15 @@ class Person {
  * @return {String}
  *
  */
+
+function purchaseLaptop(laptop){
+  if (laptopCosts.hasOwnProperty(laptop)){
+    console.log(laptopCosts[laptop]);
+    return `${laptopCosts[laptop]}`;
+  } else {
+    return -1;
+  }
+}
 
 
 /* Step 29
