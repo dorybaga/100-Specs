@@ -1136,10 +1136,7 @@ function Door(isOpen){
 function Shoe(size, color){
   this.size = size;
   this.color = color;
-
 }
-
-
 
 /**
  * Step 56
@@ -1148,7 +1145,9 @@ function Shoe(size, color){
  * @param {number} stories How many stories tall the house is
  */
 
-
+function House(stories){
+  this.stories = stories;
+}
 /**
  * Step 57
  *
